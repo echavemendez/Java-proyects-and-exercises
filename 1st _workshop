@@ -89,3 +89,13 @@ int sumatoria(int[] numeros) {
         }
         return res;
     }
+  int busqueda(int[] numeros, int buscado) {
+        int res=0;
+
+        for (int i=0; i<=numeros.length -1;i++) {
+            if (numeros[i] == buscado) {
+                res= i;
+            }
+        }
+        return res;
+    }
