@@ -99,3 +99,57 @@ int sumatoria(int[] numeros) {
         }
         return res;
     }
+boolean tienePrimo(int[] numeros) {
+        boolean res=false;
+        for (int i = 0; i <= numeros.length - 1; i++) {
+            if (esPrimo(numeros[i])) {
+                res = true;
+            }
+
+        }
+        return res;
+    }
+    boolean todosPares(int[] numeros) {
+        boolean res=true;
+        for (int i =0;i<=numeros.length -1;i++) {
+            if (esPar(numeros[i]) == false ) {
+                res=false;
+            }
+        }
+        return res;
+    }
+
+    boolean esPrefijo(String s1, String s2) {
+        boolean res=true;
+        if (s1.length() > s2.length()) {
+            res = false;
+        }
+        else {
+            for (int i =0;i<=s1.length()-1;i++) {
+                if (s1.charAt(i) != s2.charAt(i)) {
+                    res = false;
+                }
+        }
+        
+        }
+        return res;
+    }
+
+    boolean esSufijo(String s1, String s2) {
+        boolean res=true;
+        if (s1.length() > s2.length()) {
+            res = false;
+        }
+        else {
+            for (int i =0;i<=s1.length()-1;i++) {
+                if (s1.charAt(s1.length()-i-1) != s2.charAt(s2.length()-i-1)) {
+                    res = false;
+                }
+        }
+        
+        }
+        return res;
+    }
+    }
+
+
